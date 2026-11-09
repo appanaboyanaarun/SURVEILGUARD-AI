@@ -1,0 +1,54 @@
+test_email_routes_require_admin (tests.test_email_system.TestAuthorization.test_email_routes_require_admin)
+Test that email routes import and use require_admin. ... ok
+test_require_admin_import (tests.test_email_system.TestAuthorization.test_require_admin_import)
+Test that require_admin is available for protecting routes. ... ok
+test_auto_dispatch_after_incident (tests.test_email_system.TestAutoDispatch.test_auto_dispatch_after_incident)
+Test email is dispatched automatically for a new suspicious incident. ... ok
+test_dispatch_suspicious_event_email_returns_immediately (tests.test_email_system.TestBackgroundProcessing.test_dispatch_suspicious_event_email_returns_immediately)
+Test that dispatch_suspicious_event_email starts a background thread and returns immediately. ... ok
+test_send_suspicious_event_email_not_configured_does_not_block (tests.test_email_system.TestBackgroundProcessing.test_send_suspicious_event_email_not_configured_does_not_block)
+Test that when not configured, dispatch returns immediately without error. ... ok
+test_duplicate_prevention (tests.test_email_system.TestDuplicatePrevention.test_duplicate_prevention)
+Test that sending the same incident to the same recipient is deduplicated. ... ok
+test_get_provider_status_no_secrets (tests.test_email_system.TestEmailConfiguration.test_get_provider_status_no_secrets)
+Provider status must not reveal passwords. ... ok
+test_is_configured_complete (tests.test_email_system.TestEmailConfiguration.test_is_configured_complete)
+When all SMTP settings are present, service is configured. ... ok
+test_is_configured_disabled (tests.test_email_system.TestEmailConfiguration.test_is_configured_disabled)
+When EMAIL_ENABLED=false, service is not configured. ... ok
+test_is_configured_missing_credentials (tests.test_email_system.TestEmailConfiguration.test_is_configured_missing_credentials)
+When SMTP credentials are missing, service is not configured. ... ok
+test_mask_email (tests.test_email_system.TestEmailConfiguration.test_mask_email) ... ok
+test_validate_email (tests.test_email_system.TestEmailConfiguration.test_validate_email) ... ok
+test_send_test_email_auth_failure (tests.test_email_system.TestEmailSending.test_send_test_email_auth_failure)
+Test SMTP authentication failure is handled gracefully. ... ok
+test_send_test_email_not_configured (tests.test_email_system.TestEmailSending.test_send_test_email_not_configured)
+Test email when not configured returns NOT_CONFIGURED. ... ok
+test_send_test_email_success (tests.test_email_system.TestEmailSending.test_send_test_email_success)
+Test email sends successfully with mocked SMTP. ... ok
+test_build_email_content_includes_thumbnail (tests.test_email_system.TestEvidenceLinks.test_build_email_content_includes_thumbnail)
+Test that email content includes thumbnail path when available. ... ok
+test_build_email_content_without_thumbnail (tests.test_email_system.TestEvidenceLinks.test_build_email_content_without_thumbnail)
+Test email content works without thumbnail. ... ok
+test_missing_credentials (tests.test_email_system.TestMissingCredentialsAndFailures.test_missing_credentials)
+Test that missing credentials are handled without crashing. ... ok
+test_smtp_connection_timeout (tests.test_email_system.TestMissingCredentialsAndFailures.test_smtp_connection_timeout)
+Test SMTP timeout is handled gracefully. ... ok
+test_smtp_server_disconnected (tests.test_email_system.TestMissingCredentialsAndFailures.test_smtp_server_disconnected)
+Test SMTP server disconnect is handled gracefully. ... ok
+test_multiple_recipients_all_get_email (tests.test_email_system.TestMultipleRecipients.test_multiple_recipients_all_get_email)
+Test that all active recipients receive an email. ... ok
+test_email_log_persistence (tests.test_email_system.TestNotificationHistoryPersistence.test_email_log_persistence)
+Test that email logs are persisted to the database. ... ok
+test_email_recipient_persistence (tests.test_email_system.TestNotificationHistoryPersistence.test_email_recipient_persistence)
+Test that email recipients are persisted to the database. ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.136s
+
+OK
+
+
+SUCCESS: True
+FAILURES: 0
+ERRORS: 0

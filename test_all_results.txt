@@ -1,0 +1,201 @@
+..........F.............EF.E.FEFE
+======================================================================
+ERROR: test_mock_sms_records_mock_status (tests.test_sms_integration.TestSMSIntegration.test_mock_sms_records_mock_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 92, in test_mock_sms_records_mock_status
+    with patch.object(settings, "SMS_PROVIDER", "mock"):
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+======================================================================
+ERROR: test_retry_failed_sms (tests.test_sms_integration.TestSMSIntegration.test_retry_failed_sms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 209, in test_retry_failed_sms
+    with patch.object(settings, "SMS_PROVIDER", "mock"):
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+======================================================================
+ERROR: test_twilio_api_error_handling (tests.test_sms_integration.TestSMSIntegration.test_twilio_api_error_handling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1432, in patched
+    return func(*newargs, **newkeywargs)
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 149, in test_twilio_api_error_handling
+    with patch.object(settings, "SMS_PROVIDER", "twilio"), \
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+======================================================================
+ERROR: test_twilio_successful_dispatch (tests.test_sms_integration.TestSMSIntegration.test_twilio_successful_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1432, in patched
+    return func(*newargs, **newkeywargs)
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 123, in test_twilio_successful_dispatch
+    with patch.object(settings, "SMS_PROVIDER", "twilio"), \
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+======================================================================
+FAIL: test_11_test_sms_dispatch (tests.test_system.TestSurveilGuardSystem.test_11_test_sms_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_system.py", line 218, in test_11_test_sms_dispatch
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_provider_status_endpoint (tests.test_sms_integration.TestSMSIntegration.test_provider_status_endpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 79, in test_provider_status_endpoint
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_send_suspicious_activity_alert_sms (tests.test_sms_integration.TestSMSIntegration.test_send_suspicious_activity_alert_sms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 283, in test_send_suspicious_activity_alert_sms
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_twilio_status_callback_webhook (tests.test_sms_integration.TestSMSIntegration.test_twilio_status_callback_webhook)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 185, in test_twilio_status_callback_webhook
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+----------------------------------------------------------------------
+Ran 33 tests in 3.254s
+
+FAILED (failures=4, errors=4)
+
+SUCCESS: False
+FAILURES: 4
+ERRORS: 4
+FAIL: test_11_test_sms_dispatch (tests.test_system.TestSurveilGuardSystem.test_11_test_sms_dispatch)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_system.py", line 218, in test_11_test_sms_dispatch
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+FAIL: test_provider_status_endpoint (tests.test_sms_integration.TestSMSIntegration.test_provider_status_endpoint)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 79, in test_provider_status_endpoint
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+FAIL: test_send_suspicious_activity_alert_sms (tests.test_sms_integration.TestSMSIntegration.test_send_suspicious_activity_alert_sms)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 283, in test_send_suspicious_activity_alert_sms
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+FAIL: test_twilio_status_callback_webhook (tests.test_sms_integration.TestSMSIntegration.test_twilio_status_callback_webhook)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 185, in test_twilio_status_callback_webhook
+    self.assertEqual(resp.status_code, 200)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 200
+
+ERROR: test_mock_sms_records_mock_status (tests.test_sms_integration.TestSMSIntegration.test_mock_sms_records_mock_status)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 92, in test_mock_sms_records_mock_status
+    with patch.object(settings, "SMS_PROVIDER", "mock"):
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+ERROR: test_retry_failed_sms (tests.test_sms_integration.TestSMSIntegration.test_retry_failed_sms)
+Traceback (most recent call last):
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 209, in test_retry_failed_sms
+    with patch.object(settings, "SMS_PROVIDER", "mock"):
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+ERROR: test_twilio_api_error_handling (tests.test_sms_integration.TestSMSIntegration.test_twilio_api_error_handling)
+Traceback (most recent call last):
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1432, in patched
+    return func(*newargs, **newkeywargs)
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 149, in test_twilio_api_error_handling
+    with patch.object(settings, "SMS_PROVIDER", "twilio"), \
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
+ERROR: test_twilio_successful_dispatch (tests.test_sms_integration.TestSMSIntegration.test_twilio_successful_dispatch)
+Traceback (most recent call last):
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1432, in patched
+    return func(*newargs, **newkeywargs)
+  File "C:\Users\appan\OneDrive\Desktop\AJ\tests\test_sms_integration.py", line 123, in test_twilio_successful_dispatch
+    with patch.object(settings, "SMS_PROVIDER", "twilio"), \
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1503, in __enter__
+    original, local = self.get_original()
+                      ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ajaya\AppData\Local\Programs\Python\Python314\Lib\unittest\mock.py", line 1473, in get_original
+    raise AttributeError(
+        "%s does not have the attribute %r" % (target, name)
+    )
+AttributeError: <app.config.Settings object at 0x00000231A9E35BE0> does not have the attribute 'SMS_PROVIDER'
+
